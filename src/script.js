@@ -1,15 +1,19 @@
-function takeValue(x){
-    document.getElementById('Result').innerHTML +=x;
+function takeValue(x) {
+    document.getElementById('Result').innerHTML += x;
 }
 
-function clearInput(){
-    document.getElementById('Result').innerHTML ="";
+function clearInput() {
+    document.getElementById('Result').innerHTML = "";
 }
 
-function calculateResult(){
+function calculateResult() {
     var result = eval(document.getElementById('Result').innerHTML);
-    document.getElementById('Result').innerHTML = result;
+    document.getElementById('Result').innerHTML = result.toFixed(5);
 }
+
+
+
+
 
 
 var coma = document.getElementById('coma');
@@ -32,60 +36,61 @@ var equal = document.getElementById('equal');
 var deleteN = document.getElementById('Delete');
 
 
-cero.addEventListener("click", function(){
+
+
+cero.addEventListener("click", function () {
     takeValue(0);
 })
 
-coma.addEventListener("click", function(){
+coma.addEventListener("click", function () {
     takeValue(".");
 })
 
-one.addEventListener("click", function(){
+one.addEventListener("click", function () {
     takeValue(1);
 })
-two.addEventListener("click", function(){
+two.addEventListener("click", function () {
     takeValue(2);
 })
-three.addEventListener("click", function(){
+three.addEventListener("click", function () {
     takeValue(3);
 })
-four.addEventListener("click", function(){
+four.addEventListener("click", function () {
     takeValue(4);
 })
-five.addEventListener("click", function(){
+five.addEventListener("click", function () {
     takeValue(5);
 })
-six.addEventListener("click", function(){
+six.addEventListener("click", function () {
     takeValue(6);
 })
-seven.addEventListener("click", function(){
+seven.addEventListener("click", function () {
     takeValue(7);
 })
-eight.addEventListener("click", function(){
+eight.addEventListener("click", function () {
     takeValue(8);
 })
-nine.addEventListener("click", function(){
+nine.addEventListener("click", function () {
     takeValue(9);
 })
 
 
-plus.addEventListener("click", function(){
+plus.addEventListener("click", function () {
     takeValue("+");
 })
-minus.addEventListener("click", function(){
+minus.addEventListener("click", function () {
     takeValue("-");
 })
-multiply.addEventListener("click", function(){
+multiply.addEventListener("click", function () {
     takeValue("*");
 })
-divide.addEventListener("click", function(){
+divide.addEventListener("click", function () {
     takeValue("/");
 })
-
-
-equal.addEventListener("click", function(){
+equal.addEventListener("click", function () {
     calculateResult();
 })
-deleteN.addEventListener("click", function(){
+deleteN.addEventListener("click", function () {
     clearInput();
 })
+
